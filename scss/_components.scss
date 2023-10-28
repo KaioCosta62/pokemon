@@ -340,8 +340,6 @@
 }
 
 .tag-type{
-  width: 7.8rem;
-  height: 2.4rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
@@ -452,6 +450,331 @@
       font-weight: 500;
       line-height: 180%;
       opacity: .8;
+    }
+  }
+}
+
+.modal{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  @include centerTotalFlex;
+  z-index: 2023; 
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s;
+  &[type-pokemon-modal = "grass"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/grass.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "bug"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/bug.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "dark"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/dark.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "dragon"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/dragon.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "electric"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/electric.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "fairy"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/fairy.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "fighting"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/fighting.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "ground"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/ground.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "ice"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/ice.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "poison"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/poison.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "psychic"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/psychic.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "rock"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/rock.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "ghost"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/ghost.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "steal"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/steel.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "water"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/water.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "fire"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/fire.svg');
+      }
+    }
+  }
+  &[type-pokemon-modal = "flying"]{
+    .box{
+      .left-container{
+        background-image: url('../images/bg-types/flying.svg');
+      }
+    }
+  }
+  .overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  .box{
+    display: flex;
+    width: 100%;
+    max-width: 71rem;
+    height: 50.8rem;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 10px 40px 0px rgba(13, 12, 71, 0.05);
+    position: relative;
+    z-index: 1;
+    transform: translateY(4rem);
+    transition: all .3s ease-in ;
+    .close{
+      @include centerTotalFlex;
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 0.8rem;
+      background-color: #fff;
+      position: absolute;
+      top: -4.4rem;
+      right: 0;
+    }
+    .left-container{
+      width: 100%;
+      max-width: 19.1rem;
+      height: 100%;
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      .icon{
+        @include centerTotalFlex;
+        width: 3.4rem;
+        height: 3.4rem;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+      }
+      .image{
+        position: absolute;
+        left: 1.4rem;
+        bottom: 13.8rem;
+        width: 20.2rem;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .right-container{
+      padding: 3.5rem 7.2rem 2.9rem 7.4rem;
+      .name{
+        display: flex;
+        align-items: flex-end;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+        h2{
+          color: #2F3133;
+          font-size: 2.8rem;
+          letter-spacing: -0.28px;
+        }
+        span{
+          color: #7A7D80;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 1.6rem;
+          letter-spacing: -0.16px;
+          position: relative;
+          bottom: 0.3rem;
+        }
+      }
+      .type{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 3.2rem;
+        width: 100%;
+      }
+      .info{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: 4.8rem;
+        margin-bottom: 3.2rem;
+        li{
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+          span{
+            color: #7A7D80;
+            font-size: 1.3rem;
+            letter-spacing: -0.13px;
+          }
+          strong{
+            color: #2F3133;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: -0.14px;
+          }
+        }
+      }
+      .weak{
+        margin-bottom: 3.2rem;
+        h4{
+          color: #4D5053;
+          font-family: 'Inter', sans-serif;
+          font-size: 1.3rem;
+          font-weight: 600;
+          letter-spacing: -0.13px;
+          margin-bottom: 1.6rem;
+        }
+        ul{
+          width: 100%;
+          @include centerFlex;
+          flex-wrap: wrap;
+          gap: 1rem;
+        }
+      }
+      .stats{
+        h5{
+          color: #4D5053;
+          font-family: 'Inter', sans-serif;
+          font-size: 1.3rem;
+          font-weight: 600;
+          letter-spacing: -0.13px;
+          margin-bottom: 1.6rem;
+        }
+        .all{
+          display: flex;
+          flex-direction: column;
+          gap: 1.3rem;
+          .item{
+            @include centerFlex;
+            justify-content: space-between;
+            span{
+              color: #7A7D80;
+              font-family: 'Inter', sans-serif;
+              font-size: 1.2rem;
+              width: 6.8rem;
+            }
+            .bar-status{
+              width: 100%;
+              max-width: 28.3rem;
+              height: 0.3rem;
+              background-color: #EFF3F6;
+              position: relative;
+              .bar{
+                width: 56%;
+                height: 0.3rem;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 0;
+                background-color: #C20001;
+              }
+              .separator{
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include centerTotalFlex;
+                width: 100%;
+                gap: 5.4rem;
+                li{
+                  width: 0.4rem;
+                  height: 0.3rem;
+                  background-color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.open-modal{
+  .modal{
+    opacity: 1;
+    pointer-events: all;
+    .box{
+      transform: translateY(0);
     }
   }
 }
