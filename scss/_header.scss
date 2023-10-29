@@ -1,0 +1,15 @@
+.header{
+  width: 100%;
+  height: 11.2rem;
+  @include centerFlex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  .container{
+    @include centerFlexJustify;
+  }
+  p{
+    color: #FFF;
+    font-size: 1.3rem;
+  }
+}
