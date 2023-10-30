@@ -1,12 +1,3 @@
-// scripts do slide
-
-var slide = new Swiper(".slide-hero", {
-  effect: 'fade',
-  pagination: {
-    el: ".swiper-pagination",
-  },
-})
-
 
 const cardsPokemon = document.querySelectorAll('.js-open-datails-pokemon')
 const btnCloseModal = document.querySelector('.js-btn-close-modal')
