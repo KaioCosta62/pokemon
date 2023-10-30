@@ -13,4 +13,10 @@
     color: #FFF;
     font-size: 1.3rem;
   }
+  @include responsive('mobile'){
+    height: 8.2rem;
+    .logo{
+      max-width: 12.7rem;
+    }
+  }
 }
